@@ -1,3 +1,8 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 html * {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     color: #777777;
@@ -8,6 +13,7 @@ html * {
 
 body {
     background-image: url(../images/hypnotize.jpg);
+    margin-bottom: 50px;
 }
 
 header {
@@ -99,7 +105,7 @@ nav a:hover {
 
 
 #main-container {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 30px 0 30px 0;
     overflow: hidden;
@@ -111,102 +117,33 @@ nav a:hover {
     background-color: #fff;
 }
 
-#main {
-    width: 650px;
-    float: left;
-}
-
 #main p {
     padding-bottom: 20px;
 }
 
 /* images set with CSS background image */
 .img {
-    background-size: cover;
-    display: block;
+    
 }
 
 /* Profile picture */
 #profile {
-   background-image: url(../images/profile.jpg);
-   background-position: center right;
    float: left;
    margin: 0 25px 25px 0;
-   width: 200px;
-   height: 180px;
 }
 
-/* Portfolio items */
-#portfolio {
-    display: flex;
-    flex-wrap: wrap;
+#portfolio .wrap {
+    position:relative;
 }
-
-#portfolio li {
-    width: 50%;
-    padding-bottom: 50px;
-}
-
-#portfolio li:nth-child(odd) {
-    padding-right: 20px;
-}
-
-#portfolio li:nth-child(even) {
-    padding-left: 20px;
-}
-
-#portfolio li div {
-    height: 200px;
-    position: relative;
-}
-
-#portfolio li p {
-    color: #fff;
-    background-color: #4aaaa5;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    text-align: center;
+#portfolio .imgText {
     position: absolute;
-    bottom: 7px;
+    bottom: -5px;
+    color:#fff;
     width: 100%;
-    padding: 12px;
-}
-
-#djhub {
-    background-image: url(../images/djhub.jpg);
-}
-
-#ez-digital {
-    background-image: url(../images/ez-digital.jpg);
-}
-
-#innovations {
-    background-image: url(../images/innovations.jpg);
-}
-
-#memefork {
-    background-image: url(../images/memefork.jpg);
-}
-
-#purpleaf {
-    background-image: url(../images/purpleaf.jpg);
-}
-
-/* End portfolio items */
-
-#sidebar {
-    width: 270px;
-    float: right;
-}
-
-/* social icons with fontawesome */
-#wrap-icon {
-    display: table;
-    width: 100%;
-}
-
-#wrap-icon li {
-    display: table-cell;
-    width:33.33%;
+    background-color: #4eaaa4;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 15px;
 }
 
 .icon { 
@@ -298,25 +235,41 @@ button {
     padding: 7px 25px;
 }
 
-footer {
-    background: #666;
-    width: 100%;
+/* Sticky bootstrap footer */
+.footer {
     border-top: 5px solid #4aaaa5;
+    background-color: #666;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     height: 50px;
-    vertical-align: middle;
+    line-height: 50px;
 }
+
+
+body > .container {
+    padding: 60px 15px 0;
+  }
+  
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /* End sticky bootstrap footer */
 
 #copyright {
     margin: 0 auto;
     width: 300px;
     color: #ccc;
-    vertical-align: middle;
-    position: relative;
-    top: 50%;
-    margin-top: -10px;
+    padding-top: 12px;
 }
 
-/* Make footer sticky */
-#wrap-page {
-    min-height: calc(100vh - 50px);
+@media all and (max-width: 768px) {
+    #sidebar {
+        margin-top: 30px;
+    }
+
+    .img {
+        width: 100%;
+    }
 }
