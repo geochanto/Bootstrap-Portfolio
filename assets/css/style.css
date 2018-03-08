@@ -132,6 +132,10 @@ nav a:hover {
    margin: 0 25px 25px 0;
 }
 
+#portfolio .row {
+    padding-bottom: 30px;
+}
+
 #portfolio .wrap {
     position:relative;
 }
@@ -144,6 +148,10 @@ nav a:hover {
     text-align: center;
     padding: 15px;
     padding-bottom: 15px;
+}
+
+#portfolio .img {
+    min-height: 200px;
 }
 
 .icon { 
